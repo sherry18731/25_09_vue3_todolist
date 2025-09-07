@@ -1,8 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 import SignUpPage from '@/views/RegisterView.vue'
-import LoginPage from '@/views/TodoListView.vue'
-import TodoList from '@/views/TodoList.vue'
+import LoginPage from '@/views/LoginView.vue'
+import TodoList from '@/views/TodoListView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
