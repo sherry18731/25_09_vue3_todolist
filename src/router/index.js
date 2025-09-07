@@ -1,31 +1,30 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import { defineAsyncComponent } from 'vue'
 
-// 動態導入
-const LoginView = defineAsyncComponent(() => import('../views/LoginView.vue'))
-const RegisteUpView = defineAsyncComponent(() => import('../views/RegisterView.vue'))
-const TodoListView = defineAsyncComponent(() => import('../views/TodoListView.vue'))
+import SignUpPage from '@/views/views/RegisterView.vue'
+import LoginPage from '@/views/TodoListView.vue'
+import TodoList from '@/views/TodoList.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
+    { path: '/', redirect: '/login' }, // 設定預設路徑
     {
       path: '/todolist',
       name: 'todolist',
       meta: { requiresAuth: true, title: 'Todo List' },
-      component: TodoListView,
+      component: TodoList,
     },
     {
       path: '/login',
       name: 'login',
       meta: { title: '登入' },
-      component: LoginView,
+      component: LoginPage,
     },
     {
       path: '/register',
       name: 'register',
       meta: { title: '註冊' },
-      component: RegisteUpView,
+      component: SignUpPage,
     }
   ],
 })
