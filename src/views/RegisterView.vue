@@ -77,7 +77,7 @@ const router = useRouter()
 
 // 表單資料
 const email = ref('')
-const nickname = ref('test')
+const nickname = ref('')
 const password = ref('')
 const confirmPassword = ref('')
 
