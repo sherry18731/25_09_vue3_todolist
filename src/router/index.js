@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import SignUpPage from '@/views/views/RegisterView.vue'
+import SignUpPage from '@/views/RegisterView.vue'
 import LoginPage from '@/views/TodoListView.vue'
 import TodoList from '@/views/TodoList.vue'
 
